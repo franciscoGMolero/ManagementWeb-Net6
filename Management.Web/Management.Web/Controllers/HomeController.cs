@@ -4,6 +4,7 @@ using System.Diagnostics;
 
 namespace Management.Web.Controllers
 {
+    // eg: Home/Index
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

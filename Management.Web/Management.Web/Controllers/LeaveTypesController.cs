@@ -8,18 +8,18 @@ using Microsoft.EntityFrameworkCore;
 using Management.Web.Data;
 using AutoMapper;
 using Management.Web.Models;
-
+using Management.Web.Contracts;
 
 namespace Management.Web.Controllers
 {
     public class LeaveTypesController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ILeaveTypeRepository leaveTypeRepository;
         private readonly IMapper mapper;
 
-        public LeaveTypesController(ApplicationDbContext context, IMapper mapper)
+        public LeaveTypesController(ILeaveTypeRepository leaveTypeRepository, IMapper mapper)
         {
-            _context = context;
+            this.leaveTypeRepository = leaveTypeRepository;
             this.mapper = mapper;
         }
 
